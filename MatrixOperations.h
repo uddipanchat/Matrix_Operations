@@ -44,3 +44,20 @@ MatrixOperation<T>::~MatrixOperation()
 {
     cout << "Destractor..";
 }
+
+template <class T>
+MatrixOperation<T>::InputValues()
+{
+    int choice;
+    cout<<"How do you want to Input your values: "<<endl;
+    cout<<"Press 1 if you would like to enter values one by one"<<endl;
+    cout<<"Press 2 if you are using a file to load the values"<<endl;
+    cin>>choice;
+    switch(choice)
+    {
+        case(1): InputValuesFromTerminal();break;
+        case(2): InputValuesFromFile();break;
+        default:cout<<"Invalid choice";
+    }
+
+}
